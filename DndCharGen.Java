@@ -19,7 +19,7 @@ public class DndCharGen
         FileWriter writer = new FileWriter(filePath);
 
 
-        for (int i = 1; i < 4; i++)
+        for (int i = 0; i < 3; i++)
         {
             String charName = readLine(); //readLine; a custom function I added to act like codeHS
 
@@ -31,7 +31,7 @@ public class DndCharGen
             int INT = rollDice();
 
 
-            System.out.println("\n--- Character " + i + " name: " + charName + " ---"); //Displays everything in the console
+            System.out.println("\n--- Character " + (i+1) + " name: " + charName + " ---"); //Displays everything in the console
             System.out.println("Strength: " + STR);
             System.out.println("Dexterity: " + DEX);
             System.out.println("Charisma: " + CHR);
@@ -41,7 +41,7 @@ public class DndCharGen
             System.out.println("----------------------------------------------");
 
 
-            writer.write("\n--- Character " + i + " name: " + charName + " ---\n"); //Writes to the actual file
+            writer.write("\n--- Character " + (i+1) + " name: " + charName + " ---\n"); //Writes to the actual file
             writer.write("STR: " + STR + "\n");
             writer.write("DEX: " + DEX + "\n");
             writer.write("CHR: " + CHR + "\n");
